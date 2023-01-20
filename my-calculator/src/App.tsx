@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <ThemeController/>
       <Screen input={input}/>
-      <KeyPanel setInput={setInput}/>
+      <KeyPanel setInput={setInput} input={input}/>
     </div>
   )
 }
