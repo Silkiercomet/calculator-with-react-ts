@@ -1,0 +1,20 @@
+.wrapper{
+    padding: 15px;
+    background-color: var(--Darkred);
+}
+.panel{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+
+}
+.lastButtons{
+    display: flex;
+    column-gap: 15px;
+
+}
+.lastButtons > *{
+    margin-top: 15px;
+    width: 100%;
+    flex: 1;
+}
