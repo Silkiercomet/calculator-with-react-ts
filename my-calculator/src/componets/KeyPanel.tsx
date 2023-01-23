@@ -1,5 +1,6 @@
 import React from "react";
-import { FC, Dispatch, SetStateAction } from "react";
+import { FC, Dispatch, SetStateAction, useContext } from "react";
+import { ThemeContext } from "../App";
 import style from "./keypanel.module.css";
 interface set {
   setInput: Dispatch<SetStateAction<string>>;
@@ -28,6 +29,8 @@ let resetAndEqual = [
   { id: "=", value: "=" },
 ];
 const KeyPanel: FC<set> = ({ setInput, input }) => {
+  const {theme} = useContext(ThemeContext)
+  console.log(theme)
   let handleClick = ({
     target,
     currentTarget,
@@ -66,11 +69,12 @@ const KeyPanel: FC<set> = ({ setInput, input }) => {
   };
   return (
     <>
-      <div className={style.wrapper}>
-        <div className={style.panel}>
+      <div className={`${style.wrapper} ${theme === 0? "light" : theme === 1 ? "dark" : "purple"}`}>
+        <div className={`${style.panel} ${theme === 0? "light" : theme === 1 ? "dark" : "purple"}`}>
           {keys.map((element) => (
             <button
-              className={element.id}
+  
+              id={element.id}
               value={element.value}
               onClick={handleClick}
               key={element.id}
@@ -79,10 +83,10 @@ const KeyPanel: FC<set> = ({ setInput, input }) => {
             </button>
           ))}
         </div>
-        <div className={style.lastButtons}>
+        <div className={`${style.lastButtons} ${theme === 0? "light" : theme === 1 ? "dark" : "purple"}`}>
           {resetAndEqual.map((element) => (
             <button
-              className={element.id}
+              id={element.id}
               value={element.value}
               onClick={handleClick}
               key={element.id}
