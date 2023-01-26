@@ -46,6 +46,12 @@ body {
 
   background-color: hsl(0, 0%, 90%);
 }
+.App{
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+/* light panel style */
 .light{
   background-color: hsl(0, 5%, 81%);
 }
@@ -61,5 +67,46 @@ body {
   padding: 10px 20px;
   border-radius: 10px;
 }
+.light > button:hover{
+  background-color: #fff;
+  cursor: pointer;
+}
 
+.light > #reset, .light > #del{
+  background-color: hsl(185, 42%, 37%);
+  border-color: hsl(185, 58%, 25%);
+  color:hsl(0, 0%, 100%);
+}
+
+.light > #equal{
+  background-color: hsl(25, 98%, 40%);
+  border-color: hsl(25, 99%, 27%);
+  color:hsl(0, 0%, 100%);
+}
+.light > #reset:hover, .light > #del:hover, .light > #equal:hover{
+  opacity: .8;
+  cursor: pointer;
+}
+/* light panel style */
+
+/* light screen style */
+
+.light-s{
+  background-color: hsl(0, 0%, 93%);
+  color: var(--text-dark);
+  text-align: right;
+  font-size: 37px;
+
+  padding: 15px 15px;
+}
+
+.light-switch h1, .light-switch div label, #theme-selec li{
+  color: var(--text-dark);
+}
+.light-input::-webkit-slider-thumb {
+  background: hsl(25, 98%, 40%);
+  border: 1px solid transparent;
+}
+
+/* light screen style */
 

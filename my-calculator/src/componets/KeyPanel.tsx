@@ -26,11 +26,11 @@ let keys: { id: string; value: string }[] = [
 ];
 let resetAndEqual = [
   { id: "reset", value: "reset" },
-  { id: "=", value: "=" },
+  { id: "equal", value: "=" },
 ];
 const KeyPanel: FC<set> = ({ setInput, input }) => {
-  const {theme} = useContext(ThemeContext)
-  console.log(theme)
+  const theme = useContext(ThemeContext)
+
   let handleClick = ({
     target,
     currentTarget,
@@ -91,7 +91,7 @@ const KeyPanel: FC<set> = ({ setInput, input }) => {
               onClick={handleClick}
               key={element.id}
             >
-              {element.id}
+              {element.value}
             </button>
           ))}
         </div>
