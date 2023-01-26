@@ -1,11 +1,18 @@
-import { FC } from 'react'
+import { FC, useContext } from 'react'
+import { ThemeContext } from "../App";
+
 interface Input {
     input:string
 }
+
 const Screen:FC<Input> = ({input}) => {
-let x = Function("return " + "1+2")()
+
+const theme = useContext(ThemeContext)
+
+
+
   return (
-    <div>Screen {x} {input} </div>
+    <div className={`${theme === 0? "light-s" : theme === 1 ? "dark-s" : "purple-s"}`}> {input} </div>
   )
 }
 

@@ -1,12 +1,15 @@
 .wrapper{
     padding: 15px;
-    background-color: var(--Darkred);
+
 }
 .panel{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 15px;
 
+}
+.panel > *, .lastButtons > *{
+    transition: 200ms ease-in-out;
 }
 .lastButtons{
     display: flex;
@@ -18,3 +21,4 @@
     width: 100%;
     flex: 1;
 }
+
