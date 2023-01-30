@@ -9,10 +9,8 @@ const Screen:FC<Input> = ({input}) => {
 
 const theme = useContext(ThemeContext)
 
-
-
   return (
-    <div className={`${theme === 0? "light-s" : theme === 1 ? "dark-s" : "purple-s"}`}> {input} </div>
+    <div className={`screen ${theme === 0? "light-s" : theme === 1 ? "dark-s" : "purple-s"}`}> {input} </div>
   )
 }
 
