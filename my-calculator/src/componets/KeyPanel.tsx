@@ -29,7 +29,7 @@ let resetAndEqual = [
   { id: "equal", value: "=" },
 ];
 const KeyPanel: FC<set> = ({ setInput, input }) => {
-  const theme = useContext(ThemeContext)
+  const theme = useContext(ThemeContext);
 
   let handleClick = ({
     target,
@@ -69,11 +69,18 @@ const KeyPanel: FC<set> = ({ setInput, input }) => {
   };
   return (
     <>
-      <div className={`${style.wrapper} ${theme === 0? "light" : theme === 1 ? "dark" : "purple"}`}>
-        <div className={`${style.panel} ${theme === 0? "light" : theme === 1 ? "dark" : "purple"}`}>
+      <div
+        className={`${style.wrapper} ${
+          theme === 0 ? "light" : theme === 1 ? "dark" : "purple"
+        }`}
+      >
+        <div
+          className={`${style.panel} ${
+            theme === 0 ? "light" : theme === 1 ? "dark" : "purple"
+          }`}
+        >
           {keys.map((element) => (
             <button
-  
               id={element.id}
               value={element.value}
               onClick={handleClick}
@@ -83,7 +90,11 @@ const KeyPanel: FC<set> = ({ setInput, input }) => {
             </button>
           ))}
         </div>
-        <div className={`${style.lastButtons} ${theme === 0? "light" : theme === 1 ? "dark" : "purple"}`}>
+        <div
+          className={`${style.lastButtons} ${
+            theme === 0 ? "light" : theme === 1 ? "dark" : "purple"
+          }`}
+        >
           {resetAndEqual.map((element) => (
             <button
               id={element.id}
